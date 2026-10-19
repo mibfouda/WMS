@@ -1,0 +1,16 @@
+// Cloudflare Workers deployment config for WasteOps Dashboard.
+// Deploy with: bun run deploy   (builds with Vite, then uploads to Cloudflare)
+// Preview locally with: npx wrangler dev
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wasteops-dashboard",
+  "main": "dist/server/index.mjs",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "dist/client"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
